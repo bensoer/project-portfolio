@@ -30,13 +30,10 @@ export default function(){
               description={
                 <React.Fragment>
                   <Typography>
-                    The NoCap API is the API portion of a  CLI tool for storing "truths". I created this app out of a need to track my day to day work. I kept coming home at the end of the day or week with no recollection of what I had accomplished. So I created this app as a way to track
-                    my progress on my work. I included also tagging functionality so that each of my notes of tasks could be quickly and easily categorised
-                    allowing me to then produce summaries and group my work whenever I wanted to review it. The NoCap API stores all this information
-                    in a single MongoDB collection, allowing for quick retrieval and simple parsing                                   
+                                                     
                   </Typography>
                   <Typography>
-                      The CLI for NoCap is still under development but you can visit the OpenAPI spec in the links below   
+                        
                   </Typography>
                 </React.Fragment>
               }

@@ -8,6 +8,7 @@ import NoCapProject from './components/project/NoCapProject';
 import ClubfoodResourcesProject from './components/project/ClubfoodResourcesProject';
 import CoreDNSAPIProject from './components/project/CoreDNSAPIProject';
 import PrisonSimulatorProject from './components/project/PrisonSimulatorProject';
+import CDKPhotoArchiveProject from './components/project/CDKPhotoArchiveProject';
 
 export default function App() {
 
@@ -45,6 +46,9 @@ export default function App() {
           </Grid2>
           <Grid2 size={{ xs: 12, md: 6, xl: 4}} >
             <PrisonSimulatorProject/>
+          </Grid2>
+          <Grid2 size={{ xs: 12, md: 6, xl: 4}} >
+            <CDKPhotoArchiveProject/>
           </Grid2>
         </Grid2>
 
