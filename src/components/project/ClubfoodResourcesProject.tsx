@@ -3,6 +3,9 @@ import ProjectComponent from "./ProjectComponent";
 import { Chip, IconButton, Tooltip, Typography } from "@mui/material";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import MkDocsChipLink from "../chiplinks/MkDocsChipLink";
+import YAMLChipLink from "../chiplinks/YAMLChipLink";
+import PythonChipLink from "../chiplinks/PythonChipLink";
 
 
 export default function(){
@@ -21,9 +24,9 @@ export default function(){
               imageAlt="Clubfoot Resources Website Screenshot"
               chips={
                 <React.Fragment>
-                  <Chip label="MkDocs" />
-                  <Chip label="YAML" />
-                  <Chip label="Python" />
+                  <MkDocsChipLink/>
+                  <YAMLChipLink/>
+                  <PythonChipLink/>
                 </React.Fragment>
               }
               description={

@@ -3,6 +3,10 @@ import ProjectComponent from "./ProjectComponent";
 import { Chip, IconButton, Tooltip, Typography } from "@mui/material";
 //import GitHubIcon from '@mui/icons-material/GitHub';
 import { SiSwagger } from "react-icons/si";
+import NodejsChipLink from "../chiplinks/NodejsChipLink";
+import NestjsChipLink from "../chiplinks/NestjsChipLink";
+import MongoDBChipLink from "../chiplinks/MongoDBChipLink";
+import TypeScriptChipLink from "../chiplinks/TypeScriptChipLink";
 
 
 export default function(){
@@ -21,10 +25,10 @@ export default function(){
               imageAlt="NoCap API OpenAPI Doc Screenshot"
               chips={
                 <React.Fragment>
-                  <Chip label="Nodejs" />
-                  <Chip label="Nestjs" />
-                  <Chip label="MongoDB" />
-                  <Chip label="TypeScript" />
+                  <NodejsChipLink/>
+                  <NestjsChipLink/>
+                  <MongoDBChipLink/>
+                  <TypeScriptChipLink/>
                 </React.Fragment>
               }
               description={

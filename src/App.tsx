@@ -9,6 +9,7 @@ import ClubfoodResourcesProject from './components/project/ClubfoodResourcesProj
 import CoreDNSAPIProject from './components/project/CoreDNSAPIProject';
 import PrisonSimulatorProject from './components/project/PrisonSimulatorProject';
 import CDKPhotoArchiveProject from './components/project/CDKPhotoArchiveProject';
+import PyChatProject from './components/project/PyChatProject';
 
 export default function App() {
 
@@ -29,26 +30,29 @@ export default function App() {
           Hey there, welcome to my project cataloge! This is a collection of my favourite projects! 
           Here you can learn about the things I have been working on,  the technologies running them, and links
           to their source code, further documentation or running versions in production! 
-          For the latest things I'm working on, checkout my github: https://github.com/bensoer
+          For the latest things I'm working on, checkout my github: <a href="https://github.com/bensoer" target="_blank">https://github.com/bensoer</a>
         </Typography>
         </Paper>
         
 
         <Grid2 container spacing={2} >
           <Grid2 size={{ xs: 12, md: 6, xl: 4}} >
-            <NoCapProject/>
+            <CoreDNSAPIProject/>
           </Grid2>
           <Grid2 size={{ xs: 12, md: 6, xl: 4}} >
             <ClubfoodResourcesProject/>
           </Grid2>
           <Grid2 size={{ xs: 12, md: 6, xl: 4}} >
-            <CoreDNSAPIProject/>
+            <NoCapProject/>
           </Grid2>
           <Grid2 size={{ xs: 12, md: 6, xl: 4}} >
             <PrisonSimulatorProject/>
           </Grid2>
           <Grid2 size={{ xs: 12, md: 6, xl: 4}} >
             <CDKPhotoArchiveProject/>
+          </Grid2>
+          <Grid2 size={{ xs: 12, md: 6, xl: 4}} >
+            <PyChatProject/>
           </Grid2>
         </Grid2>
 

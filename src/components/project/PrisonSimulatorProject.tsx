@@ -3,6 +3,8 @@ import ProjectComponent from "./ProjectComponent";
 import { Chip, IconButton, Tooltip, Typography } from "@mui/material";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import PythonChipLink from "../chiplinks/PythonChipLink";
+import SQLiteChipLink from "../chiplinks/SQLiteChipLink";
 
 
 export default function(){
@@ -21,8 +23,8 @@ export default function(){
               imageAlt="Anonymous prisoner sitting in a cell"
               chips={
                 <React.Fragment>
-                  <Chip label="Python" />
-                  <Chip label="SQLite" />
+                  <PythonChipLink/>
+                  <SQLiteChipLink/>
                 </React.Fragment>
               }
               description={

@@ -2,6 +2,10 @@ import React from "react";
 import ProjectComponent from "./ProjectComponent";
 import { Chip, IconButton, Tooltip, Typography } from "@mui/material";
 import GitHubIcon from '@mui/icons-material/GitHub';
+import AWSCDKChipLink from "../chiplinks/AWSCDKChipLink";
+import TypeScriptChipLink from "../chiplinks/TypeScriptChipLink";
+import PythonChipLink from "../chiplinks/PythonChipLink";
+import AWSChipLink from "../chiplinks/AWSChipLink";
 //import { SiSwagger } from "react-icons/si";
 
 
@@ -21,10 +25,10 @@ export default function(){
               imageAlt="CDK Photo Archive Logo"
               chips={
                 <React.Fragment>
-                  <Chip label="AWS CDK" />
-                  <Chip label="TypeScript" />
-                  <Chip label="Python" />
-                  <Chip label="AWS" />
+                  <AWSCDKChipLink/>
+                  <TypeScriptChipLink/>
+                  <PythonChipLink/>
+                  <AWSChipLink/>
                 </React.Fragment>
               }
               description={

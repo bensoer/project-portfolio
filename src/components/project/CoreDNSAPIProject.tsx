@@ -3,11 +3,15 @@ import ProjectComponent from "./ProjectComponent";
 import { Chip, IconButton, Tooltip, Typography } from "@mui/material";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { BsMedium } from 'react-icons/bs';
+import NodejsChipLink from "../chiplinks/NodejsChipLink";
+import NestjsChipLink from "../chiplinks/NestjsChipLink";
+import SQLiteChipLink from "../chiplinks/SQLiteChipLink";
+import TypeScriptChipLink from "../chiplinks/TypeScriptChipLink";
 
 
 export default function(){
 
-    const openUrl = (url) => {
+    const openUrl = (url:string) => {
         window.open(url, '_blank').focus();
     }
 
@@ -21,10 +25,10 @@ export default function(){
               imageAlt="CoreDNS API Logo"
               chips={
                 <React.Fragment>
-                  <Chip label="Nodejs" />
-                  <Chip label="Nestjs" />
-                  <Chip label="SQLite" />
-                  <Chip label="TypeScript" />
+                  <NodejsChipLink/>
+                  <NestjsChipLink/>
+                  <SQLiteChipLink/>
+                  <TypeScriptChipLink/>
                 </React.Fragment>
               }
               description={
