@@ -33,7 +33,7 @@ export default function(){
               }
               description={
                 <React.Fragment>
-                  <Typography>
+                  <Typography component="p" sx={{ mb: 3 }}>
                     The CDK Photo Archive project was born from my need of a cheep, automated, cloud storage option for my photography collection. I wanted to 
                     take advantage of AWS Glacier services, but I also wanted to include a bunch of meta information in the files using AWS Tags. The photo
                     archive thus links to your Glacier archive S3 buckets, and on new files added, triggers a Step Function that executes a handful of lambdas

@@ -31,7 +31,7 @@ export default function(){
               }
               description={
                 <React.Fragment>
-                  <Typography>
+                  <Typography component="p" sx={{ mb: 3 }}>
                     Clubfoot Resources For Adults is a simple informational website built with MkDocs. MkDocs is a framework that allows you to quickly build out documentation
                     websites using simple markdown files and YAML configuration. The content is then rendered into a static website using Python. By leveraging this framework, 
                     I have been working on filling out and documenting various

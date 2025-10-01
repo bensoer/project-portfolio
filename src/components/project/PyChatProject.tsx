@@ -31,12 +31,12 @@ export default function(){
               }
               description={
                 <React.Fragment>
-                  <Typography>
+                  <Typography component="p" sx={{ mb: 3 }}>
                     PyChat is a fun side project myself and a friend did while in school as a way to both explore and demonstrate cryptography and hashing
                     functions. Its still one of my favourite projects as it also incorporated a bunch of networking techniques, such as epoll, in the
                     implementation and has a small framework built out to make development of encryption and hashing algorithms easier. 
                   </Typography>
-                  <Typography>
+                  <Typography component="p" sx={{ mb: 3 }}>
                     One of the challenges in the project was that my friend was not as technically skilled with networking and encryption algorithms as I was.
                     I had been literally studying them that semester when we decided to explore out the tool. So the creation of the framework added an interesting
                     layer for me in creating a tool that aided my friends exploration in cryptography.

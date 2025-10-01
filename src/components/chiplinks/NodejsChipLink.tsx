@@ -5,7 +5,7 @@ export default function NodejsChipLink(){
 
     return (
         <ChipLinkComponent
-            text = "Nodejs"
+            text = "Node"
             url = "https://nodejs.org/en"
         />
     )

@@ -33,7 +33,7 @@ export default function(){
               }
               description={
                 <React.Fragment>
-                  <Typography>
+                  <Typography component="p" sx={{ mb: 3 }}>
                                                      
                   </Typography>
                   <Typography>

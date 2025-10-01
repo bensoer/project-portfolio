@@ -29,7 +29,7 @@ export default function(){
               }
               description={
                 <React.Fragment>
-                  <Typography>
+                  <Typography component="p" sx={{ mb: 3 }}>
                     The lightswitch prison problem is a fun code / strategy puzzle an old colleague innocently brought up once in a 
                     lunch conversation. The topic quickly turns into a mutli hour debate of what was the best way to solve it. I couldn't
                     put the problem down, and even though I wrote this years ago, I have had multiple people over the years comment on 

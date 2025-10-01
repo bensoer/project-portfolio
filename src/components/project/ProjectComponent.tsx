@@ -1,5 +1,6 @@
-import { Card, CardActions, CardContent, CardHeader, CardMedia, Chip, Divider, Grid2, IconButton, Stack, Tooltip, Typography } from "@mui/material";
-import { ReactNode } from "react";
+import { ExpandMore } from "@mui/icons-material";
+import { Backdrop, Box, Button, Card, CardActions, CardContent, CardHeader, CardMedia, Chip, Divider, Fade, Grid2, IconButton, Modal, Stack, Tooltip, Typography } from "@mui/material";
+import { ReactNode, useState } from "react";
 
 export interface ProjectComponentProps{
     title: string,
@@ -9,41 +10,95 @@ export interface ProjectComponentProps{
     imageAlt: string,
     chips: ReactNode,
     description: ReactNode,
-    links: ReactNode
+    links: ReactNode,
+    modalContent?: ReactNode;
 } 
 
 
 export default function(props: ProjectComponentProps){
 
+    const [open, setOpen] = useState(false);
+
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
+
     return (
-        <Card style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%'}}>
+        <div>
 
-            <CardHeader
-                sx={{ minHeight: { lg:'5vw', md: '7vw'}, maxHeight: { lg:'5vw', md: '8vw'},  display: 'block' }}
-                title={props.title}
-                subheader={props.subheader}
-            />
-            <CardMedia
-                sx={{ borderTop: props.imageTopAndBottomBorder, borderBottom: props.imageTopAndBottomBorder}}
-                component="img"
-                image={props.imagePath}
-                alt={props.imageAlt}
-            />
-            <CardContent>
-                <Stack spacing={2}>
-                    <Stack direction={'row'} spacing={1} justifyContent={'center'}>
-                        {props.chips}
-                    </Stack>
-                    {props.description}
-                </Stack>
+            <Card 
+                //style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%'}}
+            >
+
+                <CardHeader
+                    //sx={{ minHeight: { lg:'5vw', md: '7vw'}, maxHeight: { lg:'5vw', md: '8vw'},  display: 'block' }}
+                    title={props.title}
+                    subheader={props.subheader}
+                />
+                <Box sx={{ pb: 2, pl: 1, display: "flex", flexWrap: "wrap", gap: 0.5 }}>
+                    {props.chips}
+                </Box>
+                <CardMedia
+                    //sx={{ borderTop: props.imageTopAndBottomBorder, borderBottom: props.imageTopAndBottomBorder}}
+                    sx={{
+                        aspectRatio: "16/9",  // keeps consistent ratio (modern CSS)
+                        objectFit: "cover",   // fills the box, crops if needed
+                        borderRadius: 0,
+                    }}
+                    component="img"
+                    image={props.imagePath}
+                    alt={props.imageAlt}
+                />
+                <Divider variant="middle"  sx={{ my: 1, borderColor: "#E0E0E0" }} />
+
+
+
+                <CardActions disableSpacing sx={{ marginTop: 'auto'}}>
+                    {props.links}
+                    <Box sx={{ flexGrow: 1 }} />
+                    <Button size="small" onClick={handleOpen}>Learn More</Button>
+                </CardActions>
                 
-            </CardContent>
+            </Card>
 
 
-            <CardActions disableSpacing sx={{ marginTop: 'auto'}}>
-                {props.links}
-            </CardActions>
-            
-        </Card>
+            <Modal 
+                open={open} 
+                onClose={handleClose} 
+            >
+                <Box
+                    sx={{
+                        position: "absolute" as const,
+                        top: "50%",
+                        left: "50%",
+                        transform: "translate(-50%, -50%)",
+                        width: { xs: "90%", md: 600 },
+                        bgcolor: "background.paper",
+                        borderRadius: 2,
+                        boxShadow: 24,
+                        p: 4,
+                        maxHeight: "90vh",
+                        overflowY: "auto",
+                    }}
+                >
+                    <Typography variant="h5" gutterBottom>
+                        {props.title}
+                    </Typography>
+                    <Box sx={{ pb: 2, display: "flex", flexWrap: "wrap", gap: 0.5 }}>
+                        {props.chips}
+                    </Box>
+                    {props.modalContent || props.description}
+                    <Box sx={{ display: "flex", justifyContent: "space-between", mt: 3 }}>
+                        {/* Links on the left */}
+                        <Box>{props.links}</Box>
+
+                        {/* Close button on the right */}
+                        <Button onClick={handleClose}>
+                            Close
+                        </Button>
+                    </Box>
+                </Box>
+                
+            </Modal>
+        </div>
     )
 }
