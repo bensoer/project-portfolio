@@ -57,7 +57,7 @@ export default function App() {
         </Typography>
       </Box>
 
-      <Stack spacing={4} marginX={10} marginY={5}>
+      <Stack spacing={4} marginX={{ xs: 2, md: 5}} marginY={5}>
         
         <ImageList variant="masonry" cols={ cols} gap={16}>
           {projects.map((project) => (
