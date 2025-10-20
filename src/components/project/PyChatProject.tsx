@@ -1,19 +1,15 @@
 import React from "react";
 import ProjectComponent from "./ProjectComponent";
-import { Chip, IconButton, Tooltip, Typography } from "@mui/material";
+import { IconButton, Tooltip, Typography } from "@mui/material";
 import GitHubIcon from '@mui/icons-material/GitHub';
-import AWSCDKChipLink from "../chiplinks/AWSCDKChipLink";
-import TypeScriptChipLink from "../chiplinks/TypeScriptChipLink";
 import PythonChipLink from "../chiplinks/PythonChipLink";
-import AWSChipLink from "../chiplinks/AWSChipLink";
-//import { SiSwagger } from "react-icons/si";
-import { SiReadthedocs } from "react-icons/si";
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 
 
 export default function(){
 
-    const openUrl = (url) => {
-        window.open(url, '_blank').focus();
+    const openUrl = (url: string) => {
+        window.open(url, '_blank')!.focus();
     }
 
 
@@ -54,11 +50,12 @@ export default function(){
                             <GitHubIcon />
                         </IconButton>
                     </Tooltip>
-                    <Tooltip title="View ReadTheDocs Documentation">
-                        <IconButton aria-label="View ReadTheDocs Documentation" onClick={() => openUrl("https://pychat.readthedocs.io/en/stable/")}>
-                            <SiReadthedocs/>
+                    <Tooltip title="View Documentation">
+                        <IconButton aria-label="View Documentation" onClick={() => openUrl("https://pychat.readthedocs.io/en/stable/")}>
+                            <OpenInNewIcon />
                         </IconButton>
                     </Tooltip>
+                    
                 </React.Fragment>
               }
             

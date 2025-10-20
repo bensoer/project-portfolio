@@ -1,6 +1,6 @@
 import React from "react";
 import ProjectComponent from "./ProjectComponent";
-import { Chip, IconButton, Tooltip, Typography } from "@mui/material";
+import { IconButton, Tooltip, Typography } from "@mui/material";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import AWSCDKChipLink from "../chiplinks/AWSCDKChipLink";
 import TypeScriptChipLink from "../chiplinks/TypeScriptChipLink";
@@ -11,8 +11,8 @@ import AWSChipLink from "../chiplinks/AWSChipLink";
 
 export default function(){
 
-    const openUrl = (url) => {
-        window.open(url, '_blank').focus();
+    const openUrl = (url: string) => {
+        window.open(url, '_blank')!.focus();
     }
 
 

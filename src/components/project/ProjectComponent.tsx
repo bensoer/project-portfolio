@@ -1,6 +1,6 @@
-import { ExpandMore } from "@mui/icons-material";
-import { Backdrop, Box, Button, Card, CardActions, CardContent, CardHeader, CardMedia, Chip, Divider, Fade, Grid2, IconButton, Modal, Stack, Tooltip, Typography } from "@mui/material";
+import { Box, Button, Card, CardActions, CardHeader, CardMedia, Divider, Modal, Typography } from "@mui/material";
 import { ReactNode, useState } from "react";
+import MenuIcon from '@mui/icons-material/Menu';
 
 export interface ProjectComponentProps{
     title: string,
@@ -26,7 +26,7 @@ export default function(props: ProjectComponentProps){
         <div>
 
             <Card 
-                //style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%'}}
+                variant="outlined"
             >
 
                 <CardHeader
@@ -52,10 +52,17 @@ export default function(props: ProjectComponentProps){
 
 
 
-                <CardActions disableSpacing sx={{ marginTop: 'auto'}}>
-                    {props.links}
+                <CardActions disableSpacing sx={{ marginTop: 'auto', paddingX: 2 }}>
+                    {/* <Tooltip title="Learn More">
+                        <IconButton aria-label="Learn More" onClick={handleOpen}>
+                            <MenuIcon />
+                        </IconButton>
+                    </Tooltip> */}
+                    <Button startIcon={<MenuIcon />} onClick={handleOpen}>
+                        Learn More
+                    </Button>
                     <Box sx={{ flexGrow: 1 }} />
-                    <Button size="small" onClick={handleOpen}>Learn More</Button>
+                    {props.links}
                 </CardActions>
                 
             </Card>

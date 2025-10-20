@@ -10,10 +10,10 @@ export default function(props: ChipLinkComponentProps){
 
 
     const onChipClick = () => {
-        window.open(props.url, '_blank').focus();
+        window.open(props.url, '_blank')!.focus();
     }
 
-    const techColors = {
+    const techColors: Record<string, string> = {
         React: "#A7D8F0",       // soft blue
         Node: "#7CC27C",      // soft teal, distinct from MongoDB
         Nestjs: "#F4A6A6",      // soft pink/red

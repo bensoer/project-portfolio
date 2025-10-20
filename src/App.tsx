@@ -1,9 +1,5 @@
-import { AppBar, Box, Button, Chip, Container, Grid2, IconButton, ImageList, ImageListItem, Paper, Stack, Toolbar, Tooltip, Typography, useMediaQuery, useTheme } from '@mui/material'
+import { Box, ImageList, ImageListItem, Link, Stack, Typography, useMediaQuery, useTheme } from '@mui/material'
 import './App.css'
-import ProjectComponent from './components/project/ProjectComponent'
-import React from 'react'
-import GitHubIcon from '@mui/icons-material/GitHub';
-import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import NoCapProject from './components/project/NoCapProject';
 import ClubfoodResourcesProject from './components/project/ClubfoodResourcesProject';
 import CoreDNSAPIProject from './components/project/CoreDNSAPIProject';
@@ -35,24 +31,33 @@ export default function App() {
 
   return (
     <Stack>
-      <AppBar position="static" sx={{ alignItems: "center" }} >
-        <Toolbar >
-          <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}>
-            Ben's Project Catalogue
-          </Typography>
-        </Toolbar>
-      </AppBar>
+      <Box
+        sx={{
+          textAlign: "center",
+          paddingTop: 6,
+          paddingBottom: 2,
+          background: "transparent",
+        }}
+      >
+        <Typography variant="h1" gutterBottom>
+          Ben's Project Catalogue
+        </Typography>
+
+        <Typography
+
+          sx={{ maxWidth: 700, mx: "auto", px: 2}}
+        >
+          Hello! Welcome to my project collection.
+          Here you can learn about some of my favourite projects I have been working on, the technologies running them,
+          and links to their source code, documentation, and running versions in production. <br />
+          For the latest projects, check out my&nbsp;
+          <Link href="https://github.com/bensoer" target="_blank" underline="hover">
+            GitHub
+          </Link>.
+        </Typography>
+      </Box>
 
       <Stack spacing={4} marginX={10} marginY={5}>
-
-        <Paper elevation={1} sx={{ padding: '15px'}}>
-        <Typography>
-          Hey there, welcome to my project cataloge! This is a collection of my favourite projects! 
-          Here you can learn about the things I have been working on,  the technologies running them, and links
-          to their source code, further documentation or running versions in production! 
-          For the latest things I'm working on, checkout my github: <a href="https://github.com/bensoer" target="_blank">https://github.com/bensoer</a>
-        </Typography>
-        </Paper>
         
         <ImageList variant="masonry" cols={ cols} gap={16}>
           {projects.map((project) => (
