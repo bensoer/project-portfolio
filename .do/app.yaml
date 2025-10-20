@@ -6,8 +6,7 @@ static_sites:
       repo_clone_url: https://github.com/bensoer/project-portfolio.git
       branch: main
     build_command: "npm install && npm run build"
-    source_dir: src
-    output_dir: build
+    output_dir: dist
     environment_slug: "node-js"
 domains:
   - domain: portfolio.bensoer.com
