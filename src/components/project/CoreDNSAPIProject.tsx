@@ -19,7 +19,7 @@ export default function(){
     return (
         <ProjectComponent
               title='CoreDNS API'
-              subheader="API Endpoint For Managing CoreDNS For Your Homelab"
+              subheader="REST API Endpoint For Managing CoreDNS"
               imageTopAndBottomBorder='4px solid grey'
               imagePath="coredns-api-logo.png"
               imageAlt="CoreDNS API Logo"
@@ -34,10 +34,14 @@ export default function(){
               description={
                 <React.Fragment>
                   <Typography component="p" sx={{ mb: 3 }}>
-                                                     
+                    The CoreDNS API is a RESTful API built with NestJS that allows you to manage your CoreDNS server configurations programmatically. 
                   </Typography>
                   <Typography>
-                        
+                    CoreDNS is a flexible and extensible DNS server that can be used in a range of applications, from Kubernetes to HomeLabs. Its only problem 
+                    though, is it does not come built-in with any API services for managing it. There is third-party support, but these are
+                    community managed, don't always work, and require recompiling of the CoreDNS binary. I wanted a REST API service that could run on the default
+                    CoreDNS container and extend its capabilities without needing to change anything. Thus the CoreDNS API was born. 
+                    This API provides endpoints to create, read, update, and delete DNS records, making it easier to automate DNS management tasks.
                   </Typography>
                 </React.Fragment>
               }

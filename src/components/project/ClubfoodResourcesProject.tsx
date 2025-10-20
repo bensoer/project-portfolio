@@ -18,7 +18,7 @@ export default function(){
     return (
         <ProjectComponent
               title='Clubfoot Resources For Adults'
-              subheader="Clubfoot resources for adults, by adults"
+              subheader="Clubfoot Resources for Adults, by Adults"
               imageTopAndBottomBorder='4px solid navy'
               imagePath="clubfoot-resources-screenshot.png"
               imageAlt="Clubfoot Resources Website Screenshot"

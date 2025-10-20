@@ -17,7 +17,7 @@ export default function(){
     return (
         <ProjectComponent
               title='Prison Simulator'
-              subheader="Simulator for executing the prison lightswitch problem"
+              subheader="'Prison Lightswitch Problem' Simulator and Stats Aggregator"
               imageTopAndBottomBorder='4px solid black'
               imagePath="anonymous-prisoner-cropped.jpg"
               imageAlt="Anonymous prisoner sitting in a cell"
@@ -34,7 +34,7 @@ export default function(){
                     lunch conversation. The topic quickly turns into a mutli hour debate of what was the best way to solve it. I couldn't
                     put the problem down, and even though I wrote this years ago, I have had multiple people over the years comment on 
                     my implementation and the problem when they first hear about it. This project simply solves the prison lightswitch 
-                    problem by simulating out the problem until an answer is reached - allowing the simulation of days passing in seconds. 
+                    problem by simulating out the problem until an answer is reached - allowing the simulation of days to pass in seconds. 
                     Part of the fun of it was also to log out a whole bunch of metrics to get a sense of how long things took and how it 
                     may vary over mutliple executions. I stored all of this in a denormalised SQLite database and then wrote a second script 
                     that would parse through it and output the metrics 
@@ -51,8 +51,8 @@ export default function(){
                         <GitHubIcon />
                     </IconButton>
                 </Tooltip>
-                <Tooltip title="Read more about the lightswitch prison problem">
-                    <IconButton aria-label="Read more about the lightswitch prison problem" onClick={() => openUrl("https://medium.com/i-math/100-prisoners-and-a-light-bulb-573426272f4c")}>
+                <Tooltip title="Read more about the prison lightswitch problem">
+                    <IconButton aria-label="Read more about the prison lightswitch problem" onClick={() => openUrl("https://medium.com/i-math/100-prisoners-and-a-light-bulb-573426272f4c")}>
                         <OpenInNewIcon />
                     </IconButton>
                 </Tooltip>

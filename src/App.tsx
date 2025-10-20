@@ -40,14 +40,14 @@ export default function App() {
         }}
       >
         <Typography variant="h1" gutterBottom>
-          Ben's Project Catalogue
+          Ben's Project Portfolio
         </Typography>
 
         <Typography
 
           sx={{ maxWidth: 700, mx: "auto", px: 2}}
         >
-          Hello! Welcome to my project collection.
+          Hello! Welcome to my portfolio.
           Here you can learn about some of my favourite projects I have been working on, the technologies running them,
           and links to their source code, documentation, and running versions in production. <br />
           For the latest projects, check out my&nbsp;
